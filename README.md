@@ -4,7 +4,7 @@ This is a simple Spring Boot project that implements user registration and login
 
 ---
 
-## 🚀 Features
+## Features
 - User Registration (Name, Email, Password)
 - User Login (Manual Authentication)
 - Email Notification after Registration
@@ -15,16 +15,16 @@ This is a simple Spring Boot project that implements user registration and login
 
 ---
 
-## 🎨 Frontend Technologies
+## Frontend Technologies
 - Thymeleaf (Server-side rendering)
 - HTML
 - Bootstrap 5
 
-Thymeleaf is used to render dynamic data from backend (Spring Boot) to frontend pages.
+Thymeleaf is used to dynamically render data from Spring Boot backend to frontend pages.
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 - Java
 - Spring Boot
 - Spring Data JPA
@@ -35,27 +35,27 @@ Thymeleaf is used to render dynamic data from backend (Spring Boot) to frontend 
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
-### 📝 Registration Flow
-- User opens registration page (Thymeleaf form)
+### Registration Flow
+- User opens registration page
 - Enters name, email, password
 - Data is saved into MySQL database
 - Welcome email is sent after successful registration
 
-### 🔐 Login Flow
+### Login Flow
 - User enters email and password
-- Backend validates credentials manually
-- If correct → redirected to home page using Thymeleaf view
+- System validates credentials manually from database
+- If correct → user is redirected to home page
 
 ---
 
 ## 📧 Email Feature
-After successful registration, a welcome email is sent using Spring Boot Mail.
+A welcome email is automatically sent to the user after successful registration using Spring Boot Mail service.
 
 ---
 
-## 🗄️ Database Configuration
+## Database Configuration
 
 Update `application.properties`:
 
@@ -64,3 +64,4 @@ spring.datasource.url=jdbc:mysql://localhost:3306/your_db_name
 spring.datasource.username=your_database_username
 spring.datasource.password=your_database_password
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
